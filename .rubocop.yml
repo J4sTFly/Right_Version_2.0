@@ -1,0 +1,30 @@
+require:
+  - rubocop-rspec
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - '*.ru'
+    - 'bin/***'
+    - 'app/views/**/**'
+    - 'Gemfile'
+    - 'Rakefile'
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Style/RedundantFetchBlock:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+RSpec/ContextWording:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false

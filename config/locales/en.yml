@@ -31,3 +31,24 @@
 
 en:
   hello: "Hello world"
+  errors:
+    messages:
+      authorized_error: Permission denied
+      authorized_detail: action is not available for signed in users
+      bad_request: invalid request
+      unauthorized_error: user must be authorized
+      unauthorized_detail: action is available only for authorized users
+      forbidden_error: Permission denied
+      forbidden_detail: Access denied
+      parameters_missing: request params not provided
+      model/single_validation_error: Validation error
+      not_found_error: invalid record
+      bad_credentials_error: Invalid request
+      auth:
+        bad_credentials: provided credentials are invalid
+      active_record:
+        not_found_error: invalid record
+        not_found: record not found
+      token_expired_error: Invalid token
+      passwords:
+        token_expired_detail: token expired
