@@ -4,15 +4,14 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
   def change
     create_table :users do |t|
       ## Database authenticatable
-      t.string :email,              null: false, default: ""
-      t.string :password_digest, null: false, default: ""
+      t.string :email, null: false, default: ''
+      t.string :password_digest, null: false
 
       ## Recoverable
       t.string   :reset_password_token
-      t.datetime :reset_password_sent_at
-
+      t.datetime :reset_token_expires
       ## Rememberable
-      t.datetime :remember_created_at
+      # t.datetime :remember_created_at
 
       ## Custom fields
       t.string :username, null: false
@@ -34,13 +33,13 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
       t.string   :confirmation_token
       t.datetime :confirmed_at
       t.datetime :confirmation_sent_at
+      t.datetime :token_expires_at
       # t.string   :unconfirmed_email # Only if using reconfirmable
 
       ## Lockable
       # t.integer  :failed_attempts, default: 0, null: false # Only if lock strategy is :failed_attempts
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
-
 
       t.timestamps null: false
     end
